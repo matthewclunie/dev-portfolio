@@ -2,14 +2,14 @@ import { Moon } from "lucide-react";
 
 const TopNav = () => {
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between animate-fadeDown">
       <div>
-        <div className="text-3xl">Matthew Clunie | Software Developer</div>
-        <div>I'm a professional developer thats so good at coding fr fr</div>
+        <h1 className="text-3xl">Matthew Clunie | Software Developer</h1>
+        <p>Brief sentence about myself</p>
       </div>
-      <div>
+      <button>
         <Moon />
-      </div>
+      </button>
     </div>
   );
 };
