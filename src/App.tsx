@@ -1,12 +1,11 @@
 import "./App.css";
-import SideNav from "./components/SideNav/SideNav.js";
-import TopNav from "./components/TopNav/TopNav.js";
+// import SideNav from "./components/SideNav/SideNav.js";
+import NavBar from "./components/NavBar/NavBar";
 
 function App() {
   return (
     <div>
-      <TopNav />
-      <SideNav />
+      <NavBar />
     </div>
   );
 }

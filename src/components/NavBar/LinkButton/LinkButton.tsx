@@ -3,16 +3,18 @@ import { FunctionComponent } from "react";
 interface Props {
   icon: React.JSX.Element;
   source: string;
-  className?: string;
 }
 
-const LinkButton: FunctionComponent<Props> = ({ icon, source, className }) => {
+const LinkButton: FunctionComponent<Props> = ({ icon, source }) => {
   const handleClick = () => {
     window.location.href = source;
   };
 
   return (
-    <button className={className} onClick={handleClick}>
+    <button
+      className="p-2 transition-all hover:scale-110 hover:text-cyan-500"
+      onClick={handleClick}
+    >
       {icon}
     </button>
   );

@@ -5,7 +5,11 @@ interface Props {
 }
 
 const NavButton: FunctionComponent<Props> = ({ text }) => {
-  return <button className="py-4">{text}</button>;
+  return (
+    <button className="p-4 duration-500 transition-color hover:text-cyan-500 hover:scale-110">
+      {text}
+    </button>
+  );
 };
 
 export default NavButton;
