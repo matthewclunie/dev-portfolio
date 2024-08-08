@@ -1,11 +1,12 @@
 import "./App.css";
-// import SideNav from "./components/SideNav/SideNav.js";
+import { HeroImage } from "./components/HeroImage/HeroImage";
 import NavBar from "./components/NavBar/NavBar";
 
 function App() {
   return (
-    <div>
+    <div className="h-screen">
       <NavBar />
+      <HeroImage />
     </div>
   );
 }
