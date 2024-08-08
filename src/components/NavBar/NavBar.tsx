@@ -7,7 +7,9 @@ const TopNav = () => {
   return (
     <div className="flex items-center justify-between animate-fade-down">
       <div>
-        <h1 className="text-3xl">Matthew Clunie | Software Developer</h1>
+        <h3 className="text-3xl animate-fade-color animation-fill-forwards delay-1400">
+          Matthew Clunie | Software Developer
+        </h3>
         <p>Software Developer experienced in React.</p>
       </div>
       <div className="flex">
