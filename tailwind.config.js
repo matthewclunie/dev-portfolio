@@ -12,12 +12,17 @@ export default {
           "0%": { opacity: "0", transform: `translate(0px, -40px)` },
           "100%": { opacity: "1" },
         },
+        fadeUp: {
+          "0%": { opacity: "1" },
+          "100%": { opacity: "0", transform: `translate(0px, -40px)` },
+        },
         fadeColor: {
           "100%": { color: "#fef08a" },
         },
       },
       animation: {
         "fade-down": "fadeDown 1s ease-in-out",
+        "fade-up": "fadeUp 1s ease-in-out",
         "fade-color": "fadeColor 1s ease-in-out",
       },
     },

@@ -1,5 +1,3 @@
-import React from "react";
-
 export const HeroImage = () => {
   return (
     <div className="flex items-center justify-center h-screen delay-700 opacity-0 animate-fade-down animation-fill-forwards">
