@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import SectionTitle from "../SectionTitle.tsx/SectionTitle";
 
 // interface Props {
@@ -7,27 +7,22 @@ import SectionTitle from "../SectionTitle.tsx/SectionTitle";
 
 const Experience = () => {
   const [onScreen, setOnScreen] = useState(false);
-
-  const handleScroll = () => {
-    const element = document.querySelector(".animate-fade-down");
-
-    const rect = element && element.getBoundingClientRect();
-    rect && rect.top < window.innerHeight && rect.bottom >= -600
-      ? setOnScreen(false)
-      : setOnScreen(true);
-  };
+  const ref = useRef(null);
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setOnScreen(entry.isIntersecting);
+      },
+      { threshold: 0.5 }
+    );
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
   }, []);
 
   return (
-    <div className="flex items-center m-16">
+    <div ref={ref} className="flex items-center m-16">
       <div
         className={`flex w-full justify-between opacity-0 ${
           onScreen ? "animate-fade-down" : ""
@@ -37,7 +32,7 @@ const Experience = () => {
           <SectionTitle onScreen={onScreen} title="Experience" />
           <p className="text-xl">Ergonomic Group</p>
         </div>
-        <div>
+        <div className="w-1/3">
           <SectionTitle onScreen={onScreen} title="Education" />
           <p className="text-xl">Hunter Business School</p>
         </div>

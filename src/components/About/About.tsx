@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import SectionTitle from "../SectionTitle.tsx/SectionTitle";
 
 // interface Props {
@@ -17,28 +17,30 @@ const About = () => {
     "WordPress",
   ];
 
+  const ref = useRef(null);
   const [onScreen, setOnScreen] = useState(false);
 
-  const handleScroll = () => {
-    const element = document.querySelector(".animate-fade-down");
-
-    const rect = element && element.getBoundingClientRect();
-    rect && rect.bottom < window.innerHeight && rect.bottom >= -200
-      ? setOnScreen(false)
-      : setOnScreen(true);
-  };
-
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setOnScreen(entry.isIntersecting);
+      },
+      { threshold: 0.5 }
+    );
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    // return () => {
+    //   if (ref.current) {
+    //     observer.unobserve(ref.current);
+    //   }
+    // };
   }, []);
 
   return (
-    <div className="flex min-h-[400px] m-16">
+    <div ref={ref} className="flex min-h-[400px] m-16">
       <div
         className={`flex justify-between opacity-0 ${
           onScreen ? "animate-fade-down" : "animate-fade-up"
