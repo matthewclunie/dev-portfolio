@@ -6,8 +6,8 @@ export const HeroImage = () => {
           Matthew Clunie
         </h1>
         <h3 className="text-3xl">
-          React Developer adept at designing dynamic, responsive and
-          user-centric solutions.
+          React Developer adept at building and designing dynamic, responsive
+          and user-centric solutions.
         </h3>
       </div>
     </div>

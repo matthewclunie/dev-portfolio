@@ -5,6 +5,8 @@ export default {
     extend: {
       colors: {
         "bullet-highlight": "#06b6d4",
+        backgroundBlue: "#002226",
+        aliceblue: "#f0f8ff",
         // "title-highlight": "#fef08a",
       },
       keyframes: {
@@ -20,13 +22,14 @@ export default {
           "100%": { color: "#fef08a" },
         },
       },
-      animation: {
-        "fade-down": "fadeDown 1s ease-in-out",
-        "fade-up": "fadeUp 1s ease-in-out",
-        "fade-color": "fadeColor 1s ease-in-out",
-      },
+    },
+    animation: {
+      "fade-down": "fadeDown 1s ease-in-out",
+      "fade-up": "fadeUp 1s ease-in-out",
+      "fade-color": "fadeColor 1s ease-in-out",
     },
   },
+
   plugins: [
     function ({ addUtilities, theme, addComponents }) {
       const utilities = {
@@ -46,7 +49,6 @@ export default {
           color: theme("colors.bullet-highlight"),
         },
       });
-
       addUtilities(utilities, ["responsive", "hover"]);
     },
   ],

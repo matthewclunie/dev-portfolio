@@ -5,7 +5,7 @@ import ThemeButton from "./ThemeButton/ThemeButton";
 
 const TopNav = () => {
   return (
-    <div className="flex items-center justify-between animate-fade-down">
+    <div className="fixed z-10 flex items-center justify-between w-full p-2 bg-opacity-80 bg-backgroundBlue backdrop-filter backdrop-blur-md animate-fade-down">
       <div>
         <h3 className="text-3xl animate-fade-color animation-fill-forwards delay-1400">
           Matthew Clunie | Software Developer

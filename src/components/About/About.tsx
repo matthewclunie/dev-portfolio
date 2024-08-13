@@ -40,7 +40,7 @@ const About = () => {
   }, []);
 
   return (
-    <div ref={ref} className="flex min-h-[400px] m-16">
+    <div ref={ref} className="flex min-h-[500px] mx-16">
       <div
         className={`flex justify-between opacity-0 ${
           onScreen ? "animate-fade-down" : "animate-fade-up"
@@ -59,7 +59,7 @@ const About = () => {
         </div>
         <div className="w-1/3">
           <SectionTitle onScreen={onScreen} title="Skills" />
-          <ul className="grid grid-cols-2 pl-5 text-2xl list-disc color-cyan-4 list-bullet-highlight">
+          <ul className="grid grid-cols-2 pl-5 text-2xl list-disc list-bullet-highlight">
             {skills.map((skill) => {
               return <li className="mx-2 mb-2">{skill}</li>;
             })}

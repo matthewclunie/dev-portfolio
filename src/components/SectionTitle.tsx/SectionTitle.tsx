@@ -8,7 +8,7 @@ interface Props {
 const SectionTitle: FunctionComponent<Props> = ({ title, onScreen }) => {
   return (
     <h2
-      className={`mb-6 text-5xl ${
+      className={`mb-6 font-bold text-5xl ${
         onScreen ? "animate-fade-color animation-fill-forwards delay-700" : ""
       }`}
     >

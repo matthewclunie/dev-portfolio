@@ -21,20 +21,58 @@ const Experience = () => {
     }
   }, []);
 
+  const workPoints = [
+    "Played a pivotal role in maintaining a critical software solution adopted by a Fortune 500 company, overseeing assets exceeding $40 million.",
+    "Proficient in programming primarily using React, JavaScript/TypeScript, Redux, HTML, and CSS.",
+    "Unit testing with Jest and React Testing Library to ensure the reliability of the application.",
+    "Designed and implemented dashboards and components, using MaterialUI, enhancing user experience for both clients and administrators.",
+  ];
+
+  const schoolPoints = [
+    "Hunter Business School Presidents Award.",
+    "Client-side programming in HTML, CSS and JavaScript",
+    "Coding using React, TypeScript, Python and PHP, encompassing e-Commece, content management, architecture and security.",
+  ];
+
   return (
-    <div ref={ref} className="flex items-center m-16">
-      <div
-        className={`flex w-full justify-between opacity-0 ${
-          onScreen ? "animate-fade-down" : ""
-        } animation-fill-forwards`}
-      >
-        <div>
-          <SectionTitle onScreen={onScreen} title="Experience" />
-          <p className="text-xl">Ergonomic Group</p>
+    <div
+      ref={ref}
+      className={`mx-16 min-h-[500px] flex opacity-0 ${
+        onScreen ? "animate-fade-down" : "animate-fade-up"
+      } animation-fill-forwards`}
+    >
+      <div className="mr-16">
+        <SectionTitle onScreen={onScreen} title="Experience" />
+        <div className="flex">
+          <h4 className="mr-4 text-2xl font-bold">Ergonomic Group</h4>
+          <div>
+            <ul className="pl-5 text-xl list-disc list-bullet-highlight">
+              {workPoints.map((workPoint) => {
+                return (
+                  <li className="mx-2 mb-6">
+                    <p>{workPoint}</p>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         </div>
-        <div className="w-1/3">
-          <SectionTitle onScreen={onScreen} title="Education" />
-          <p className="text-xl">Hunter Business School</p>
+      </div>
+      <div>
+        <SectionTitle onScreen={onScreen} title="Education" />
+        <div className="flex">
+          <h4 className="mr-4 text-2xl font-bold">Hunter Business School</h4>
+          <div>
+            <ul className="pl-5 text-xl list-disc list-bullet-highlight">
+              {schoolPoints.map((schoolPoint) => {
+                return (
+                  <li className="mx-2 mb-6">
+                    <p>{schoolPoint}</p>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         </div>
       </div>
     </div>

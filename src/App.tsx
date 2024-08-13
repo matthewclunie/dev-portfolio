@@ -27,12 +27,14 @@ function App() {
   // }, []);
 
   return (
-    <body className="h-full">
-      <NavBar />
-      <HeroImage />
-      <About />
-      <Experience />
-    </body>
+    <html>
+      <body className="text-white bg-backgroundBlue">
+        <NavBar />
+        <HeroImage />
+        <About />
+        <Experience />
+      </body>
+    </html>
   );
 }
 
