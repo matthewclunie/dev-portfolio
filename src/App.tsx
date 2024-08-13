@@ -1,4 +1,3 @@
-import "./App.css";
 import About from "./components/About/About";
 import Experience from "./components/Experience/Experience";
 import { HeroImage } from "./components/HeroImage/HeroImage";
