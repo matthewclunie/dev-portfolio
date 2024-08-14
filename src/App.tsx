@@ -2,6 +2,7 @@ import About from "./components/About/About";
 import Experience from "./components/Experience/Experience";
 import { HeroImage } from "./components/HeroImage/HeroImage";
 import NavBar from "./components/NavBar/NavBar";
+import ProjectList from "./components/ProjectList/ProjectList";
 
 function App() {
   // const [onScreen, setOnScreen] = useState(false);
@@ -32,6 +33,7 @@ function App() {
         <HeroImage />
         <About />
         <Experience />
+        <ProjectList />
       </body>
     </html>
   );

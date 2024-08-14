@@ -21,6 +21,8 @@ const About = () => {
   const [onScreen, setOnScreen] = useState(false);
 
   useEffect(() => {
+    const current = ref.current;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         setOnScreen(entry.isIntersecting);
@@ -28,15 +30,15 @@ const About = () => {
       { threshold: 0.5 }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    if (current) {
+      observer.observe(current);
     }
 
-    // return () => {
-    //   if (ref.current) {
-    //     observer.unobserve(ref.current);
-    //   }
-    // };
+    return () => {
+      if (current) {
+        observer.unobserve(current);
+      }
+    };
   }, []);
 
   return (
