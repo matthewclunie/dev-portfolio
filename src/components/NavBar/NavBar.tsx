@@ -5,12 +5,11 @@ import ThemeButton from "./ThemeButton/ThemeButton";
 
 const TopNav = () => {
   return (
-    <div className="fixed z-10 flex items-center justify-between w-full p-2 bg-opacity-80 bg-backgroundBlue backdrop-filter backdrop-blur-md animate-fade-down">
+    <div className="fixed z-10 flex items-center justify-between w-full px-10 py-6 bg-opacity-80 bg-backgroundBlue backdrop-filter backdrop-blur-md animate-fade-down">
       <div>
         <h3 className="text-3xl animate-fade-color animation-fill-forwards delay-1400">
           Matthew Clunie | Software Developer
         </h3>
-        <p>Software Developer experienced in React.</p>
       </div>
       <div className="flex">
         <NavButton text="About" />

@@ -37,41 +37,43 @@ const Experience = () => {
   return (
     <div
       ref={ref}
-      className={`mx-16 min-h-[500px] flex opacity-0 ${
+      className={`flex items-center justify-center min-h-[500px] opacity-0 ${
         onScreen ? "animate-fade-down" : "animate-fade-up"
       } animation-fill-forwards`}
     >
-      <div className="mr-16">
-        <SectionTitle onScreen={onScreen} title="Experience" />
-        <div className="flex">
-          <h4 className="mr-4 text-2xl font-bold">Ergonomic Group</h4>
-          <div>
-            <ul className="pl-5 text-xl list-disc list-bullet-highlight">
-              {workPoints.map((workPoint) => {
-                return (
-                  <li className="mx-2 mb-6">
-                    <p>{workPoint}</p>
-                  </li>
-                );
-              })}
-            </ul>
+      <div className="flex w-3/4 mx-auto">
+        <div className="mr-16">
+          <SectionTitle onScreen={onScreen} title="Experience" />
+          <div className="flex">
+            <h4 className="mr-4 text-2xl font-bold">Ergonomic Group</h4>
+            <div>
+              <ul className="pl-5 text-xl list-disc list-bullet-highlight">
+                {workPoints.map((workPoint) => {
+                  return (
+                    <li className="mx-2 mb-6">
+                      <p>{workPoint}</p>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-      <div>
-        <SectionTitle onScreen={onScreen} title="Education" />
-        <div className="flex">
-          <h4 className="mr-4 text-2xl font-bold">Hunter Business School</h4>
-          <div>
-            <ul className="pl-5 text-xl list-disc list-bullet-highlight">
-              {schoolPoints.map((schoolPoint) => {
-                return (
-                  <li className="mx-2 mb-6">
-                    <p>{schoolPoint}</p>
-                  </li>
-                );
-              })}
-            </ul>
+        <div>
+          <SectionTitle onScreen={onScreen} title="Education" />
+          <div className="flex">
+            <h4 className="mr-4 text-2xl font-bold">Hunter Business School</h4>
+            <div>
+              <ul className="pl-5 text-xl list-disc list-bullet-highlight">
+                {schoolPoints.map((schoolPoint) => {
+                  return (
+                    <li className="mx-2 mb-6">
+                      <p>{schoolPoint}</p>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
